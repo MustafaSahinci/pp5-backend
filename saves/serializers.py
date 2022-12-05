@@ -15,6 +15,7 @@ class SaveSerializer(serializers.ModelSerializer):
         fields = ['id', 'created_at', 'owner', 'car']
         
     def create(self, validated_data):
+        """ can't save same product 2 times """
         try:
             return super().create(validated_data)
         except IntegrityError:
