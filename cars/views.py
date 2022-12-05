@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Car
 from .serializers import CarSerializer
-from drf_api.permissions import IsOwnerOrReadOnly
+from pp5.permissions import IsOwnerOrReadOnly
 
 
 class CarList(APIView):
@@ -36,19 +36,19 @@ class CarList(APIView):
 
 class CarDetail(APIView):
     permission_classes = [IsOwnerOrReadOnly]
-    serializer_class = PostSerializer
+    serializer_class = CarSerializer
 
     def get_object(self, pk):
         try:
             car = Car.objects.get(pk=pk)
-            self.check_object_permissions(self.request, post)
+            self.check_object_permissions(self.request, car)
             return car
         except Car.DoesNotExist:
             raise Http404
 
     def get(self, request, pk):
         car = self.get_object(pk)
-        serializer = carSerializer(
+        serializer = CarSerializer(
             car, context={'request': request}
         )
         return Response(serializer.data)
@@ -56,7 +56,7 @@ class CarDetail(APIView):
     def put(self, request, pk):
         car = self.get_object(pk)
         serializer = CarSerializer(
-            post, data=request.data, context={'request': request}
+            car, data=request.data, context={'request': request}
         )
         if serializer.is_valid():
             serializer.save()
