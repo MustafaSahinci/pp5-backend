@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     'profiles',
     'cars',
+    'saves',
 ]
 
 MIDDLEWARE = [
