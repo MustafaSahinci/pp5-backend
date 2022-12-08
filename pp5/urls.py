@@ -29,4 +29,5 @@ urlpatterns = [
     path('', include('cars.urls')),
     path('', include('saves.urls')),
     path('', include('followers.urls')),
+    path('', include('biddings.urls')),
 ]

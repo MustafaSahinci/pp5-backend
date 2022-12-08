@@ -93,6 +93,7 @@ INSTALLED_APPS = [
     'cars',
     'saves',
     'followers',
+    'biddings',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
