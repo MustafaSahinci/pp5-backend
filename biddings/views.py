@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions
+from django_filters.rest_framework import DjangoFilterBackend
 from pp5.permissions import IsOwnerOrReadOnly
 from .models import Bidding
 from .serializers import BiddingSerializer, BiddingDetailSerializer
@@ -11,6 +12,8 @@ class BiddingList(generics.ListCreateAPIView):
     serializer_class = BiddingSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Bidding.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['car']
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
