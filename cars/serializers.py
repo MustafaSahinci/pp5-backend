@@ -10,7 +10,7 @@ class CarSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     save_id = serializers.SerializerMethodField()
     saves_count = serializers.ReadOnlyField()
-    # comments_count = serializers.ReadOnlyField()
+    biddings_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -44,5 +44,5 @@ class CarSerializer(serializers.ModelSerializer):
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'created_at', 'updated_at',
             'title', 'content', 'image', 'image_filter',
-            'save_id', 'saves_count',  #'comments_count'
+            'save_id', 'saves_count', 'biddings_count'
         ]
