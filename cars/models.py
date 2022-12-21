@@ -28,6 +28,7 @@ class Car(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
+    price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     image = models.ImageField(
         upload_to='images/', default='../default_post_of4jmm', blank=True
     )
