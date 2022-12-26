@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include('saves.urls')),
     path('', include('followers.urls')),
     path('', include('biddings.urls')),
+    path('', include('comments.urls')),
 ]

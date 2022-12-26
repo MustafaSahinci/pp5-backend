@@ -15,7 +15,8 @@ class CarList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Car.objects.annotate(
         saves_count=Count('saves', distinct=True),
-        biddings_count=Count('bidding', distinct=True)
+        biddings_count=Count('bidding', distinct=True),
+        comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -34,6 +35,7 @@ class CarList(generics.ListCreateAPIView):
     ordering_fields = [
         'saves_count',
         'biddings_count',
+        'comments_count',
         'saves__created_at',
     ]
 
@@ -49,5 +51,6 @@ class CarDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Car.objects.annotate(
         saves_count=Count('saves', distinct=True),
-        biddings_count=Count('bidding', distinct=True)
+        biddings_count=Count('bidding', distinct=True),
+        comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')
