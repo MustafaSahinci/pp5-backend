@@ -28,8 +28,19 @@ class Car(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
+    year = models.PositiveIntegerField(default=0)
+    km = models.PositiveIntegerField(default=0)
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     image = models.ImageField(
+        upload_to='images/', default='../default_post_of4jmm', blank=True
+    )
+    image2 = models.ImageField(
+        upload_to='images/', default='../default_post_of4jmm', blank=True
+    )
+    image3 = models.ImageField(
+        upload_to='images/', default='../default_post_of4jmm', blank=True
+    )
+    image4 = models.ImageField(
         upload_to='images/', default='../default_post_of4jmm', blank=True
     )
     image_filter = models.CharField(
