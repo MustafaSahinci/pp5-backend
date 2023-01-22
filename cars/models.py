@@ -32,16 +32,16 @@ class Car(models.Model):
     km = models.PositiveIntegerField(default=0)
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_of4jmm', blank=True
+        upload_to='images/', default='../default_post_of4jmm'
     )
     image2 = models.ImageField(
-        upload_to='images/', default='../default_post_of4jmm', blank=True
+        upload_to='images/', default='../default_post_of4jmm'
     )
     image3 = models.ImageField(
-        upload_to='images/', default='../default_post_of4jmm', blank=True
+        upload_to='images/', default='../default_post_of4jmm'
     )
     image4 = models.ImageField(
-        upload_to='images/', default='../default_post_of4jmm', blank=True
+        upload_to='images/', default='../default_post_of4jmm'
     )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
