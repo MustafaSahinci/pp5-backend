@@ -50,6 +50,9 @@ for the frontend repository click [here](https://github.com/MustafaSahinci/pp5-f
 - ForeignKey relation between the car field and the Car model owner field
 
 ## test
+All pages have been tested with CI python linter and here is 1 example:
+
+![pep8](assets/pep8.png)
 ### admin
 admin can do al of these things below for every user
 ### profile
@@ -73,6 +76,7 @@ users can create, read and delete their saves
 - cloudinary
 - ElephantSQL Used as database for this project
 - lucidchart for the database table
+- CI Python Linter
 - Git used for version control, using the terminal to commit - to Git and Push to GitHub
 - GitHub is used to store the projects code after being pushed from Git.
 - Gitpod to write my code.

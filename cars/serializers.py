@@ -40,7 +40,7 @@ class CarSerializer(serializers.ModelSerializer):
             ).first()
             return save.id if save else None
         return None
-    
+
     def get_bidding_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:

@@ -13,7 +13,7 @@ class SaveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Save
         fields = ['id', 'created_at', 'owner', 'car']
-        
+
     def create(self, validated_data):
         """ can't save same product 2 times """
         try:
