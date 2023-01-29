@@ -55,8 +55,8 @@ All pages have been tested with CI python linter. All the code passes with no er
 ![pep8](assets/pep8.png)
 ### admin
 admin can do all of these things below for every user
-### profile
-users can (created automatically), read, update profiles
+### profile (created automatically)
+users can read and update profiles
 ### following
 users can create, read and delete their followings
 ### car
