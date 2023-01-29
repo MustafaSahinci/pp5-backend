@@ -50,11 +50,11 @@ for the frontend repository click [here](https://github.com/MustafaSahinci/pp5-f
 - ForeignKey relation between the car field and the Car model owner field
 
 ## test
-All pages have been tested with CI python linter and here is 1 example:
+All pages have been tested with CI python linter. All the code passes with no errors or warnings and here is 1 example:
 
 ![pep8](assets/pep8.png)
 ### admin
-admin can do al of these things below for every user
+admin can do all of these things below for every user
 ### profile
 users can (created automatically), read, update profiles
 ### following
@@ -96,7 +96,7 @@ users can create, read and delete their saves
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard
 
-$ git clone https://github.com/MustafaSahinci/pp5-backend.git
+- git clone https://github.com/MustafaSahinci/pp5-backend.git
 
 7. Press Enter to create your local clone
 
