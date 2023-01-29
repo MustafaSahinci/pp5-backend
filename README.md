@@ -8,7 +8,7 @@ for the deployed fronted click [here](https://frontend-pp5.herokuapp.com/)
 for the frontend repository click [here](https://github.com/MustafaSahinci/pp5-frontend)
 
 ## Database
-![database](assets/database.png)
+![database](assets/databasee.png)
 ### User Model
 - The User model contains information about the user. It is part of the Django allauth library.
 - One-to-one relation with the Profile model owner field
