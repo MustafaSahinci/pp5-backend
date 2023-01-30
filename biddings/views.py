@@ -25,4 +25,4 @@ class BiddingDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = BiddingDetailSerializer
-    queryset = Bidding.objects.all()z
+    queryset = Bidding.objects.all()
